@@ -1,8 +1,3 @@
-<!-- main background 
-brand logos 
-product images 
-end image -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -39,74 +34,143 @@ end image -->
   <body>
     <!-- Header -->
     <header>
-      <a href="#" class="logo">Pricely</a>
+  <a href="#" class="logo">Pricely</a>
 
-      <ul class="navlist">
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">On Sale</a></li>
-        <li><a href="#">New Arrivals</a></li>
-        <li><a href="#">Brands</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+  <ul class="navlist">
+    <li><a href="#">Home</a></li>
+    <li><a href="../Brands/brands.html">Brands</a></li>
+    <li><a href="comparison.html">Comparison</a></li>
+    <li><a href="">Best Seller</a></li>
+    <li><a href="../Contact/contact.html">Contact</a></li>
+  </ul>
 
-      <div class="nav-right">
-        <a href="#"><i class="ri-search-line"></i></a>
-        <a href="#"><i class="ri-shopping-cart-line"></i></a>
-        <a href="#"><i class="ri-user-line"></i></a>
-        <div class="bx bx-menu" id="menu-icon"></div>
-      </div>
-    </header>
+  <div class="nav-right">
+    <div class="search-container">
+      <input type="text" placeholder="Search" />
+      <i class="ri-search-line"></i>
+    </div>
+    <a href="#"><i class="ri-shopping-cart-line"></i></a>
+    <a href="#"><i class="ri-user-line"></i></a>
+    <button id="menu-button"><i class="bx bx-menu"></i></button>
+    <div class="bx bx-menu" id="menu-icon"></div>
+  </div>
+</header>
+
+<div class="side-drawer" id="side-drawer">
+  <a href="#" class="close-btn" id="close-button">&times;</a>
+  <ul>
+      <li><a href="../Amazon/amazon.html">Amazon Deals</a></li>
+      <li><a href="flipkart.html">Flipkart Deals</a></li>
+      <li><a href="../Croma/croma.html">Croma Deals</a></li>
+      <li><a href="../Reliance/reliance.html">Reliance Deals</a></li>
+  </ul>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- Side Drawer
+<div class="side-drawer" id="side-drawer">
+  <div class="drawer-header">
+    <h2>Menu</h2>
+    <div class="close-drawer" id="close-drawer">&times;</div>
+  </div>
+  <ul class="drawer-list">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Brands</a></li>
+    <li><a href="../Amazon/amazon.html">Products</a></li>
+    <li><a href="reliance.html">Best Seller</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div> -->
+
+    
 
     <!-- Home -->
-    <section class="home">
-      <div class="home-text" data-aos="fade-up">
-        <h6>Top Picks</h6>
-        <h1>
-          Best Phones <br />
-          Just for You
-        </h1>
-        <p>
-          Explore the newest smartphones on the market. Whether you're looking
-          for cutting-edge technology or the best value for your money, Pricely
-          has the perfect phone for you. Upgrade today!
-        </p>
 
-        <a href="#" class="btn"
-          >Shop Now <i class="ri-arrow-right-line"></i>
-        </a>
+    <!-- Offers Sliding Panel Starts -->
+    <div class="slider-page">
+      <div class="slider-container">
+          <div class="banner-container" id="bannerContainer"></div>
+          <span id="prevArrow" class="nav-arrow">&#10094;</span>  <!-- Left arrow -->
+          <span id="nextArrow" class="nav-arrow">&#10095;</span>  <!-- Right arrow -->
+          <!-- Dots Container -->
+          <div class="dots-container" id="dotsContainer"></div>
+      </div>
+  </div>
+    <!-- Offers Sliding Panel Starts -->
+
+     <section class="home">
+      <div class="home-container">
+        <div class="home-text" data-aos="fade-up">
+          <!-- <h6>Top Picks</h6> -->
+          <h1>
+            Best Phones <br />
+            Just for You
+          </h1>
+          <p>
+            Explore the newest smartphones on the market. Whether you're looking
+            for cutting-edge technology or the best value for your money, Pricely
+            has the perfect phone for you. Upgrade today!
+          </p>
+          <a href="#" class="btn">
+            Shop Now <i class="ri-arrow-right-line"></i>
+          </a>
+        </div>
+        <div class="home-image">
+          <img src="/Pricely/assets/Main_BG/bg.png" alt="Smartphones" />
+        </div>
       </div>
     </section>
+    
+
 
     <!-- Brands -->
-    <div class="brands">
-      <div class="main-brands" data-aos="zoom-in">
-        <div class="brands-c">
-          <img src="/assets/Brand_Logos/oppo_logo.png" alt="brand1" />
-        </div>
-
-        <div class="brands-c">
-          <img src="/assets/Brand_Logos/oneplus_logo.png" alt="brand2" />
-        </div>
-
-        <div class="brands-c">
-          <img src="/assets/Brand_Logos/samsung_logo.png" alt="brand3" />
-        </div>
-
-        <div class="brands-c">
-          <img src="/assets/Brand_Logos/apple_logo.png" alt="brand4" />
-        </div>
-
-        <div class="brands-c">
-          <img src="/assets/Brand_Logos/poco_logo.png" alt="brand5" />
-        </div>
-        <div class="brands-c">
-          <img src="/assets/Brand_Logos/vivo_logo.png" alt="brand6" />
-        </div>
-      </div>
+<div class="brands">
+  <div class="main-brands" data-aos="zoom-in">
+    <div class="brands-c">
+      <a href="https://www.oppo.com" target="_blank">
+        <img src="../assets/Brand_Logos/oppo_logo.png" alt="Oppo" />
+      </a>
     </div>
 
+    <div class="brands-c">
+      <a href="https://www.oneplus.com" target="_blank">
+        <img src="../assets/Brand_Logos/oneplus_logo.png" alt="OnePlus" />
+      </a>
+    </div>
+
+    <div class="brands-c">
+      <a href="https://www.samsung.com" target="_blank">
+        <img src="../Brands/assets/samsung-logo.png" alt="Samsung" />
+      </a>
+    </div>
+
+    <div class="brands-c">
+      <a href="https://www.apple.com" target="_blank">
+        <img src="../Brands/assets/iphone-logo.png" alt="Apple" />
+      </a>
+    </div>
+
+    <div class="brands-c">
+      <a href="https://www.nokia.com/support/licensed-products/" target="_blank">
+        <img src="../Brands/assets/nokia-logo.png" alt="Poco" />
+      </a>
+    </div>
+
+    <div class="brands-c">
+      <a href="https://www.mi.com/in/phone/?srsltid=AfmBOoqQn757L9-atpiNN81yHCAuvKnxBRkepa6q4AemkGK0C3Ah4M2k" target="_blank">
+        <img src="../Brands/assets/xiaomi-logo.png" alt="Vivo" />
+      </a>
+    </div>
+  </div>
+</div>
+
+    <!-- Brands Ends-->
+
+
+
     <!-- All Products -->
-    <section class="n-product">
+    <!-- <section class="n-product">
       <div class="center-text" data-aos="fade-down">
         <h2>All Products</h2>
       </div>
@@ -324,7 +388,7 @@ end image -->
       <div class="n-btn" data-aos="zoom-in">
         <a href="#" class="btn2">View all</a>
       </div>
-    </section>
+    </section> -->
 
     <!-- Feature -->
     <section class="feature">
@@ -335,10 +399,10 @@ end image -->
           </div>
 
           <div class="f-text">
-            <h3>Cash on Delivery</h3>
+            <h3>Latest Mobile Models</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              quas ea minus tempora, assumenda repellendus.
+              Explore the most recent mobile phones with advanced features and
+              cutting-edge technology.
             </p>
           </div>
         </div>
@@ -349,10 +413,10 @@ end image -->
           </div>
 
           <div class="f-text">
-            <h3>35 days return</h3>
+            <h3>Best Price Guaranteed</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              quas ea minus tempora, assumenda repellendus.
+              Find competitive prices and exclusive deals on your favorite
+              mobile devices.
             </p>
           </div>
         </div>
@@ -363,10 +427,10 @@ end image -->
           </div>
 
           <div class="f-text">
-            <h3>Free Shipping</h3>
+            <h3>Compare Mobile Prices</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              quas ea minus tempora, assumenda repellendus.
+              Easily compare prices across various platforms to find the best
+              deals on your favorite mobile phones.
             </p>
           </div>
         </div>
@@ -382,7 +446,7 @@ end image -->
       <div class="selling-content" data-aos="zoom-in-up">
         <div class="col">
           <div class="col-img">
-            <img src="" alt="" />
+            <img src="../assets/Main_BG/iphone.jpg" alt="" />
           </div>
 
           <div class="col-icon">
@@ -394,7 +458,7 @@ end image -->
 
         <div class="col">
           <div class="col-img">
-            <img src="" alt="" />
+            <img src="../assets/Main_BG/pixel-9-pro.png" alt="" />
           </div>
 
           <div class="col-icon">
@@ -406,7 +470,7 @@ end image -->
 
         <div class="col">
           <div class="col-img">
-            <img src="" alt="" />
+            <img src="../assets/Main_BG/s24.jpg" alt="" />
           </div>
 
           <div class="col-icon">
@@ -433,30 +497,38 @@ end image -->
       </div>
     </section>
 
+    <!-- news -->
+    <section id="tech-news">
+      <h2>Latest in Mobile Technology</h2>
+      <div id="news-container"></div>
+    </section>
+
+    <!-- news ends -->
+
     <!-- Footer -->
     <section class="footer" data-aos="fade-down">
       <div class="footer-box">
-        <h3>Company</h3>
-        <a href="">About</a>
-        <a href="">Features</a>
-        <a href="">Works</a>
-        <a href="">Career</a>
-      </div>
-
-      <div class="footer-box">
-        <h3>FAQ</h3>
-        <a href="">Account</a>
-        <a href="">Features</a>
-        <a href="">Works</a>
-        <a href="">Career</a>
+        <h3>Explore</h3>
+        <a href="">Mobile Deals</a>
+        <a href="">Latest Trends</a>
+        <a href="">Featured Brands</a>
+        <a href="">Best Sellers</a>
       </div>
 
       <div class="footer-box">
         <h3>Resources</h3>
-        <a href="">About</a>
-        <a href="">Features</a>
-        <a href="">Works</a>
-        <a href="">Career</a>
+        <a href="">Buying Guides</a>
+        <a href="">Price Comparison</a>
+        <a href="">Product Reviews</a>
+        <a href="">Seasonal Sales</a>
+      </div>
+
+      <div class="footer-box">
+        <h3>Support</h3>
+        <a href="">Terms of Service</a>
+        <a href="">Privacy Policy</a>
+        <a href="">Cookie Policy</a>
+        <a href="">Help Center</a>
       </div>
 
       <div class="footer-box">
@@ -468,6 +540,7 @@ end image -->
         </div>
       </div>
     </section>
+    
 
     <!-- Copyright -->
     <div class="copyright">

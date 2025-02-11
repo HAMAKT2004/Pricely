@@ -9,7 +9,7 @@
 }
 
 :root{
-    --bg-color: #ffffff;
+    --bg-color: #f8f8f8;
     --text-color: #000000;
     --main-color: #f0f0f0;
     --other-color: #ffc633;
@@ -86,6 +86,10 @@ header{
     transform: translateY(-5px) scale(1.1);
 }
 
+/* menu */
+
+/* menu */
+
 #menu-icon{
     font-size: 35px;
     color: var(--text-color);
@@ -95,54 +99,168 @@ header{
     display: none;
 }
 
-section{
+/* Offers Sliding Panel Starts  */
+.slider-page {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    margin-top: 78px;
+    padding: 0; /* Remove padding to ensure full-width slider */
+}
+
+.slider-container {
+    position: relative;
+    width: 100%; /* Change from 100vw to 100% to fit the parent container */
+    margin: 0;
+    overflow: hidden;
+    min-height: 280px;
+}
+
+.banner-container {
+    display: flex;
+    transition: transform 0.7s ease;
+}
+
+.banner-card {
+    min-width: 100%; /* Change from 100vw to 100% */
+    height: 280px; /* Set height to match container */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.banner-card img {
+    width: 100%;
+    height: 100%; /* Force image to take full height of the container */
+    object-fit: cover; /* Ensures the image covers the entire banner-card without extra space */
+    display: block;
+}
+
+/* Styling for arrows */
+.nav-arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    user-select: none;
+    z-index: 1;
+}
+
+#prevArrow {
+    left: 10px;
+}
+
+#nextArrow {
+    right: 10px;
+}
+
+#prevArrow:hover, #nextArrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+}
+
+/* Dots Container */
+.dots-container {
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+/* Individual Dot */
+.dot {
+    height: 6px;
+    width: 6px;
+    margin: 0 5px;
+    background-color: rgba(200, 200, 200, 0.8); /* Light shaded dots with a bit of transparency */
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+/* Active Dot Style */
+.active {
+    background-color: #ffffff;
+}
+
+
+
+/* Offers Sliding Panel Ends   */
+
+section {
     padding: 90px 14% 70px;
 }
 
-.home{
-    margin-top: 25px;
+.home {
+    margin-top: -150px;
     position: relative;
     height: 100vh;
     width: 100%;
-    background: url('../assets/Main BG/home_bg.png');
-    background-size: cover;
-    background-position: center;
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
-.home-text{
-    padding-top: 60px;
+.home-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
-.home-text h1{
+.home-text {
+    padding-top: 10px;
+    flex: 1; /* Text section takes remaining space */
+}
+
+.home-image {
+    flex: 0 0 850px; /* Set width for the image section */
+    text-align: right; /* Align image to the right */
+    /* margin-left: -20px; Reduce this value to decrease space between text and image */
+    margin-right: -100px;
+    margin-top: -60px;
+    height: -300px;
+}
+
+.home-image img {
+    max-width: 100%; /* Ensure it doesn’t exceed the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: add rounded corners */
+}
+
+.home-text h1 {
     font-size: var(--h1-font);
     font-weight: 700;
     line-height: 1.1;
+    margin-top: -70px;
     margin-bottom: 20px;
 }
 
-.home-text h6{
+/* .home-text h6 {
     font-size: 15px;
     font-weight: 500;
     color: var(--second-color);
     letter-spacing: 3px;
     text-transform: uppercase;
+    margin-top: -40px;
     margin-bottom: 10px;
-}
+} */
 
-.home-text p{
+.home-text p {
     width: 100%;
     max-width: 560px;
     font-size: var(--p-font);
     font-weight: 400;
     color: var(--second-color);
     line-height: 33px;
-    margin-bottom: 35px;
+    margin-bottom: 10px;
 }
 
-.btn{
+.btn {
     display: inline-block;
     padding: 14px 42px;
     background: var(--text-color);
@@ -153,15 +271,19 @@ section{
     transition: all .6s;
 }
 
-.btn:hover{
+.btn:hover {
     transform: scale(0.9) translateY(-6px);
     border: 2px solid var(--text-color);
     background: transparent;
     color: var(--text-color);
 }
-.btn i{
+
+.btn i {
     margin-left: 9px;
 }
+
+
+  
 
 .brands{
     padding: 30px 14%;
@@ -286,6 +408,7 @@ section{
 }
 
 .feature{
+    margin-top: 100px;
     padding: 10px 14% 10px;
 }
 .feature-content{
@@ -590,3 +713,238 @@ section{
         margin-right: 7px;
     }
 }
+
+
+.search-container {
+    position: relative;
+    width: 250px;
+    margin-right: 30px;
+}
+.search-container input {
+    width: 100%;
+    height: 35px;
+    padding: 10px 35px 10px 10px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+}
+.search-container i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+}
+
+
+
+
+
+/*news */
+
+#tech-news {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+#tech-news h2 {
+    text-align: center; 
+    font-size: 40px;
+}
+
+#news-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    justify-content:space-around; /* Distribute space evenly */
+    margin-top: 20px;
+}
+
+#news-container div {
+    flex: 0 0 calc(22%); /* Adjusted for slightly smaller blocks */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add shadow for a nice effect */
+    border-radius: 5px;
+    background-color: white; /* Optional: add background color */
+    transition: transform 0.3s; /* Smooth hover effect */
+    padding: 10px; /* Add padding inside the block */
+    margin-bottom: 45px; /* Add space between rows */
+}
+
+#news-container div:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+#news-container h3 {
+    text-align: center; /* Center title */
+    margin: 10px 0; /* Spacing above and below the title */
+}
+
+#news-container img {
+    width: 100%; /* Make image fill the block */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px 5px 0 0; /* Rounded corners for the top */
+    margin-bottom: 10px; /* Add space below the image */
+}
+
+#news-container p {
+    margin: 5px 0;
+    font-size: 14px;
+    text-align: center; /* Center description */
+}
+
+#news-container a {
+    color: blue;
+    text-decoration: underline;
+    display: block; /* Make the whole block clickable */
+}
+
+
+
+/* Style for side drawer */
+.side-drawer {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .side-drawer a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .side-drawer a:hover {
+    color: #f1f1f1;
+  }
+  
+  .side-drawer .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  /* Menu icon style */
+  #menu-icon {
+    cursor: pointer;
+    font-size: 24px;
+    padding-left: 15px;
+  }
+  
+
+
+  /* Basic styles */
+
+
+/* Basic styles */
+
+
+/* Basic styles */
+/* body {
+    font-family: Arial, sans-serif;
+} */
+
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer; /* Ensures menu button acts like a clickable button */
+}
+
+/* Side drawer styles */
+.side-drawer {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0; /* Open from the right */
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side-drawer a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-drawer a:hover {
+    color: #f1f1f1;
+}
+
+.side-drawer .close-btn {
+    position: absolute;
+    top: 10px;
+    left: 25px; /* Move close button to the left to be visible */
+    font-size: 36px;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Overlay style when side drawer is open */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.overlay.open {
+    visibility: visible;
+    opacity: 1;
+}
+
